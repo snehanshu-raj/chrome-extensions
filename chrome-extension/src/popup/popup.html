@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Screenshot Tool</title>
+    <title>Smart Shot</title>
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <div id="container">
-        <h1>Screenshot Tool</h1>
-        <button id="screenshot-btn">Take Screenshot</button>
+        <h1>Smart Shot</h1>
+        <input type="text" id="prompt-input" placeholder="Enter your prompt here">
+        <button id="screenshot-btn">Snap</button>
         <div id="result-container" style="display: none;">
             <h2>Result:</h2>
             <p id="response"></p>
         </div>
     </div>
+    <script src="config.js"></script>
     <script src="popup.js"></script>
 </body>
 </html>
