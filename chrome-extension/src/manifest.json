@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Screenshot and Quiz Answerer",
+  "name": "Smart Shot",
   "version": "1.0",
-  "description": "Take screenshots, crop them, and get answers to MCQs using Google Gemini.",
+  "description": "Take screenshots, and ASK!",
   "permissions": [
     "activeTab",
     "scripting",

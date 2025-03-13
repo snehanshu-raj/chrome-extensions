@@ -21,6 +21,8 @@ screenshotButton.addEventListener("click", () => {
             console.log("Screenshot taken successfully:", imageUri);
             const promptMessage = promptInput.value || "Answer the question based on the image.";
             sendToGemini(imageUri, promptMessage);
+            // if you want to save the screenshot
+            // saveScreenshotToFile(imageUri);
         })
         .catch((error) => {
             console.error("Error capturing screenshot:", error);
@@ -64,8 +66,32 @@ const sendToGemini = async (imageUri, promptMessage) => {
             data.candidates?.[0]?.content?.parts?.[0]?.text || "No answer received";
 
         responseParagraph.textContent = resultText;
-        resultContainer.style.display = "block"; // Show the result container
+        resultContainer.style.display = "block";
     } catch (error) {
         console.error("Error calling Gemini API:", error);
     }
 };
+
+function saveScreenshotToFile(imageUri) {
+    const base64Data = imageUri.split(",")[1];
+    const byteCharacters = atob(base64Data);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+    const byteArray = new Uint8Array(byteNumbers);
+    const blob = new Blob([byteArray], { type: "image/png" });
+    const url = URL.createObjectURL(blob);
+
+    chrome.downloads.download({
+        url: url,
+        filename: "screenshot.png",
+        saveAs: true,
+    }, (downloadId) => {
+        if (chrome.runtime.lastError) {
+            console.error("Error downloading screenshot:", chrome.runtime.lastError);
+        } else {
+            console.log("Screenshot download started:", downloadId);
+        }
+    });
+}
