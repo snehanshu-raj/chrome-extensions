@@ -1,0 +1,20 @@
+{
+  "name": "leetcode-problem-solver",
+  "version": "1.0.0",
+  "description": "A Chrome extension to solve LeetCode problems directly from the problem page.",
+  "main": "src/background.js",
+  "scripts": {
+    "build": "echo 'Build script not defined'",
+    "test": "echo 'Test script not defined'"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "leetcode",
+    "problem-solver"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
