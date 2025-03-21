@@ -20,7 +20,7 @@ This Chrome extension allows users to take screenshots of their screen, and send
    cd chrome-extension
    ```
 
-3. Create a config.js file inside src/popup/ and add the following like along with a Google Gemini Key:
+3. Create a config.js file inside src/popup/ and add the following line along with a Google Gemini Key:
    ```
       const CONFIG = {
          API_KEY: "YOUR_KEY"
