@@ -26,7 +26,7 @@ leetcode-problem-solver
 
 1. Clone the repository:
    ```
-   git clone https://github.com/snehanshu-raj/leetcode-problem-solver.git
+   git clone https://github.com/snehanshu-raj/chrome-extensions.git
    ```
 2. Navigate to the project directory:
    ```
