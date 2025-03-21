@@ -12,7 +12,7 @@ This Chrome extension allows users to take screenshots of their screen, and send
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/snehanshu-raj/smart-screenshot.git
    ```
 
 2. Navigate to the project directory:
